@@ -1,0 +1,115 @@
+@model RoleTop.ViewModels.AgendaViewModel
+<main>
+    <section id="meio" class="agende">
+        <h2 id="titulo"><strong> Agende-já </strong></h2>
+        <form method="POST" action='@Url.Action("AgendarEvento", "Agenda")'>
+            <div class="informacao">
+
+                <label for="nomeDoEvento">Nome do evento</label>
+                <input id="nomeDoEvento" type="text" name="nomeDoEvento" maxlength="30" minlength="3" autofocus required>
+            
+            </div>
+
+            <br />
+
+            <div class="informacao">
+
+                <label for="tipoDeEvento">Tipo de evento</label>
+                <select id="tipoDeEvento" name="tipoDeEvento" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="casamento">Casamento</option>
+                    <option value="baladas">Baladas</option>
+                    <option value="outros-eventos">Outros eventos</option>
+                </select>
+            
+            </div >
+            <br />
+            <div class="informacao">
+
+                <label for="outros-eventos-s">Escreva o tipo de evento</label>
+                <input id="outros-eventos-s" type="text" maxlength="15" />
+            
+            </div>
+
+            <br />
+
+            <div class="informacao">
+
+                <label for="planoDeEvento">Plano de evento</label>
+                <select id="planoDeEvento" name="planoDeEvento" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="salao">Somente Salão</option>
+                    <option value="salao-iluminação">Salão e Iluminação</option>
+                    <option value="salao-som">Salão e Som</option>
+                    <option value="salao-luz-e-som">Salão Iluminação e Som</option>
+                </select>
+            
+            </div>
+
+            <br />
+
+            <div class="informacao">
+
+                <label for="date">Data de evento</label>
+                <input id="date" type="date" name="date" min="2019-09-10" max="2021-01-01" required>
+
+            </div>
+
+            <br />
+            
+            <div class="n-info">
+                <label for="descricao">Descrição do evento</label>
+                <input id="descricao" name="descricao" type="text" required>
+            </div>
+
+            <div class="informacao">
+
+                <label for="nome-do-usuario">Nome Completo</label>
+                <input id="nome-do-usuario" type="text" name="nome" maxlength="30" minlength="3" required value=@Model.Cliente.Nome>
+            
+            </div>
+
+            <div class="informacao">
+
+                <label for="email">E-mail</label>
+                <input id="email" type="email" name="email" maxlength="50" required value=@Model.Cliente.Email>
+
+            </div>
+
+            <br>
+
+            <div class="informacao">
+
+                <label for="cpf">CPF</label>
+                <input id="cpf" type="text" name="cpf" maxlength="30" minlength="3" required value=@Model.Cliente.CPF>
+            
+            </div>
+
+            <br>
+            
+            <div class="informacao">
+
+                <label for="numero">Número</label>
+                <input id="numero" type="text" name="telefone" maxlength="30" minlength="3" required value=@Model.Cliente.Telefone>
+            
+            </div>
+            <div class="informacao">
+
+                <label for="publico">Publico</label>
+                <input id="publico" type="radio" name="publicoprivado" value="True">
+            </div>
+            <div class="informacao">
+
+                <label for="privado">Privado</label>
+                <input id="privado" type="radio" name="publicoprivado" value="False">
+            </div>
+
+            <div id="finalizar-agendamento">
+                <input class="botao" type="submit" value="Cadastrar Evento">
+            </div>
+        </form>
+
+
+
+    </section>
+</main>

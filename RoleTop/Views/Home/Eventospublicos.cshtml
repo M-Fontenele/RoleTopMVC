@@ -1,0 +1,42 @@
+<main>
+    <section id="pedidos-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome do evento</th>
+                                <th>Plano</th>
+                                <th>Tipo</th>
+                                <th>Dia</th>
+                                <th>Descrição</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model.Agendar)
+                            {
+                                <tr>
+                                    <td>@item.NomeDoEvento</td>
+                                    <td>@item.PlanoEvento.Nome</td>
+                                    <td>@item.TipoDeEvento</td>
+                                    <td>@item.DiaDoEvento</td>
+                                    <td>@item.DescricaoEvento</td>
+                                    @if(item.Status == 0)
+                                    {
+                                        <td class="amarelo">Pendente</td>
+                                    }
+                                    @if(item.Status == 1)
+                                    {
+                                        <td class="verde">Aceito</td>
+                                    }
+                                    @if(item.Status == 2)
+                                    {
+                                        <td class="vermelho">Recusado</td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+</main>

@@ -1,0 +1,70 @@
+<main>
+    <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")'>
+
+            <div>
+
+                <h2 id="titulo">Criar conta</h2>
+
+                <div class="informacao">
+
+                    <label for="nome-c">Nome completo</label>
+                    <input id="nome-c" type="text" maxlength="50" required name="nome">
+
+                </div>
+
+                <div class="informacao">
+
+                    <label for="senha-c">Senha</label>
+                    <input id="senha-c" type="password" required name="senha">
+
+                </div>
+
+                <div class="informacao">
+
+                    <label for="repeat-senha-c">Repetir Senha</label>
+                    <input id="repeat-senha-c" type="password" required>
+
+                </div>
+
+                <div class="informacao">
+
+                    <label for="email-c">E-mail</label>
+                    <input id="email-c" type="email" required name="email">
+
+                </div>
+                
+                <div class="informacao">
+
+                    <label for="repeat-email-c">Repetir E-mail</label>
+                    <input id="repeat-email-c" type="email" required>
+
+                </div>
+
+                <div class="informacao">
+
+                    <label for="cpf-cnpj">CPF</label>
+                    <input id="cpf-cnpj" type="text" required name="cpf">
+
+                </div>
+
+                <div class="informacao">
+                    
+                    <label for="date">Data de nascimento</label>
+                    <input id="date" type="date" max="2019-10-09" min="1880-01-01" name="dataNascimento">
+
+                </div>
+
+                <div class="informacao">
+
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" type="tel" maxlength="11" placeholder="(xx) xxxxx-xxxx" required name="telefone">
+
+                </div>
+
+                <input type="submit" value="Finalizar cadastro" class="botao-final">
+
+            </div>
+
+        </form>
+
+    </main>

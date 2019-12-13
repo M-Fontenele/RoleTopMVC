@@ -1,0 +1,34 @@
+<main>
+        <section id="meio">
+                <form method="POST" action='@Url.Action("Login","Cliente")'>
+
+                    <div>
+
+                        <h2>Login</h2>
+
+                        <div class="informacao">
+
+                            <label for="email-login">E-mail</label>
+                            <input id="email-login" type="email" name="email" maxlength="50" required>
+
+                        </div>
+                        <div class="informacao">
+
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" name="senha" required>
+
+                        </div>
+                        <a asp-controller="Cadastro" asp-action="Index" >Não tem uma conta? Cadastre-se</a>
+                        
+                        <br>
+
+                        <input type="submit" value="Entrar" class="botao-final">
+
+
+                    </div>
+
+                    
+
+                </form>
+        </section>
+    </main>

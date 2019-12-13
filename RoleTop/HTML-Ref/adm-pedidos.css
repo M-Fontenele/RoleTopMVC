@@ -1,0 +1,47 @@
+table {
+    background-color: #000000;
+}
+
+th {
+    background-color: #ffffff;
+    font-size: 1.2em;
+    padding: 2px 10px;
+}
+
+td {
+    background-color: #ffffff;
+    font-size: 1.2em;
+    padding: 2px 10px;
+}
+
+#aceitar {
+    color: hsl(118, 100%, 48%);
+}
+
+#recusar {
+    color: red;
+}
+
+.a {
+    color: hsl(118, 100%, 48%)
+}
+
+.r {
+    color: red;
+}
+
+#posicao {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #ffc600, #7d0093)
+}
+
+@media (max-width: 700px) {
+    table {
+        font-size: 0.4em;
+    }
+}

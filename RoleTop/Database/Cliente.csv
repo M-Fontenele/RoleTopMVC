@@ -1,0 +1,4 @@
+tipo_usuario=1;nome=Pessoa;senha=p;email=Pessoa@hotmail.com;cpf=12345678913;data_nascimento=01/10/2019 00:00:00;telefone=12121212
+tipo_usuario=1;nome=Pedrinho;senha=j;email=Joaozinho13@bol.com;cpf=12345678912;data_nascimento=05/10/2019 00:00:00;telefone=11111111111
+tipo_usuario=0;nome=Admin;senha=a;email=Admin@hotmail.com;cpf=12345678912;data_nascimento=02/10/2019 00:00:00;telefone=11111111111
+tipo_usuario=1;nome=Joãozinho;senha=j;email=Joaozinho13@bol.com;cpf=14523678912;data_nascimento=02/10/2019 00:00:00;telefone=11111111111

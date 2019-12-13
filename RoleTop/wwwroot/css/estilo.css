@@ -1,0 +1,236 @@
+ /*===================================================================================================================
+                                                INICIO - BANNER 
+ ==================================================================================================================*/
+
+#textoBanner {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 536px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.botaoBanner {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: #ffffff
+}
+
+/*===================================================================================================================
+                                                FIM - BANNER 
+ ==================================================================================================================*/
+/*===================================================================================================================
+                                                INICIO - FOTOS 
+ ==================================================================================================================*/
+#fotos {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+}
+
+.text-fotos {
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+
+}
+
+.botao-1 {
+        padding: 10px;
+        background-color: #7d0093;
+        border:  solid #000000;
+        border-radius: 20px;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+}
+.text-botao {
+        font-size: 1.3em;
+}
+
+/*===================================================================================================================
+                                                FIM - FOTOS 
+ ==================================================================================================================*/
+
+
+ /*===================================================================================================================
+                                                INICIO - CALENDARIO 
+ ==================================================================================================================*/
+/* #area-do-calendario {
+        background-color: #7d0093;
+} */
+
+#eventopublico {
+        display: flex;
+        justify-content: center;
+}
+
+.text-comeco-calendario {
+        margin: 10px;
+        font-size: 1.5em;
+}
+
+.mes {
+        display: flex;
+        justify-content: center;
+}
+
+.text-mes {
+        margin: 10px 30px;
+        font-size: 1.4em;
+}
+
+/* calendario tabela */
+
+#calendario-tabela {
+        display: flex;
+        justify-content: center;
+}
+table {
+        text-align: center;
+        width: 700px;
+        height: 400px;
+        margin: 5px;
+        background-color: #000000;
+}
+
+th {
+        background-color: #ffffff;
+}
+
+td {
+        background-color: #ffffff;
+}
+/* legenda tabela */
+
+#legenda-do-calendario {
+        display: flex;
+        justify-content: center;
+}
+
+#legenda-1 {
+        display: flex;
+        margin: 10px 40px;
+}
+
+.quadrado {
+        background: #7d0093;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000000;
+}
+
+.text-legend {
+        font-size: 1.2em;
+        padding: 0 10px;
+}
+
+#legenda-2 {
+        display: flex;
+        margin: 10px 40px;
+}
+
+.quadrado-1 {
+        background-color: #ffffff;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000000;
+}
+
+#b {
+        display: flex;
+        justify-content: center;
+}
+
+
+ /*===================================================================================================================
+                                                FIM - CALENDARIO 
+ ==================================================================================================================*/
+
+
+/*===================================================================================================================
+                                                INICIO - MAPA 
+ ==================================================================================================================*/
+/* #area-do-mapa {
+        background-color: #7d0093;
+} */
+
+ #mapa {
+         display: flex;
+         justify-content: center;
+         padding: 10px;
+ }
+
+ #mapa-endereco {
+         display: flex;
+         justify-content: center;
+         padding: 10px 0;
+         font-size: 1.3em;
+ }
+ #icon-maps {
+         color: #000000;
+         padding: 0 10px;
+ }
+
+/*===================================================================================================================
+                                                FIM - MAPA 
+ ==================================================================================================================*/
+
+ body {
+        background-image: linear-gradient(to bottom, #ffc600, #7d0093)
+ }
+
+ .cor-botao {
+        text-decoration: none;
+        color: #000000;
+ }
+
+
+ @media (max-width: 1250px) {
+        .text-botao {
+                font-size: 1em;
+        }
+
+        .texto-banner {
+                background-image: url(img/banner1-editado.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        }
+ }
+
+ @media (max-width: 800px) {
+        .texto-banner {
+                background-image: url(img/banner1-editado.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        }
+ }
+
+ @media (max-width: 400px) {
+        .texto-banner {
+                background-image: url(img/banner1-editado.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+        }
+ }

@@ -1,0 +1,77 @@
+@model RoleTop.ViewModels.DashboardViewModel
+<main>
+
+    <section id="mini-menu">
+        <div class="info-b-1"><a class="info-b-adm">Principal</a></div>
+        <div><a asp-controller="Administrador" asp-action="Pendentes" class="info-a-adm">Pendentes</a></div>
+        <div class="info-b-1"><a asp-controller="Administrador" asp-action="Aprovados" class="info-b">Aprovados</a></div>
+        <div class="info-b-1"><a asp-controller="Administrador" asp-action="Reprovados" class="info-b">Reprovados</a></div>
+    </section>
+
+    <div id="box-principal">
+        <a asp-controller="Administrador" asp-action="Pendentes">
+            <div id="box-pendente" class="box-pedidos">
+                <div>
+                    Pendentes
+                    </div>
+                <div>@Model.EventosPendentes</div>
+            </div>
+        </a>
+
+        <a asp-controller="Administrador" asp-action="Aprovados">
+            <div id="box-aprovado" class="box-pedidos">
+                <div>
+                    Aprovados
+                </div>
+                <div>@Model.EventosAprovados</div>
+            </div>
+        </a>
+
+        <a asp-controller="Administrador" asp-action="Reprovados">
+            <div id="box-reprovado" class="box-pedidos">
+                <div>
+                    Reprovados
+                </div>
+                <div>@Model.EventosReprovados</div>
+            </div>
+        </a>
+    </div>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="7">Pedidos</th>
+                </tr>
+                <tfoot>
+
+                </tfoot>
+
+                <tbody>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Plano</td>
+                            <td>Tipo</td>
+                            <td>Dia</td>
+                            <td>Descrição</td>
+                            <td colspan="2">Confirmar evento</td>
+                        </tr>
+                            @foreach (var item in Model.Agendar)
+                            {
+                                if(item.Status == 0){
+                                <tr>
+                                    <td>@item.NomeDoEvento</td>
+                                    <td>@item.PlanoEvento.Nome</td>
+                                    <td>@item.TipoDeEvento</td>
+                                    <td>@item.DiaDoEvento</td>
+                                    <td>@item.DescricaoEvento</td>
+                                    <td><a href='@Url.Action("Aprovar", "Administrador", new {id = @item.Id})'><i class="fas fa-check" id="aceitar"></i></a></td>
+                                    <td><a href='@Url.Action("Reprovar", "Administrador", new {id = @item.Id, pagina = "Pendentes"})'><i class="fas fa-times" id="recusar"></i></a></td>
+                                </tr>
+                                }
+                            }
+                </tbody>
+            </thead>
+        </table>
+    </section>
+    
+</main>

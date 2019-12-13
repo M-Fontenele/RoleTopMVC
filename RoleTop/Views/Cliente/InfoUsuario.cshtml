@@ -1,0 +1,48 @@
+@model RoleTop.ViewModels.BaseViewModel;
+<main>
+    <section id="mini-menu">
+        <div><a asp-controller="Cliente" asp-action="InfoUsuario" class="info-a">Informações do usuário</a></div>   
+        <div class="info-b-1"><a asp-controller="Cliente" asp-action="MeusEventos" class="info-b">Meus eventos</a></div>     
+    </section>
+
+    <section id="info-u">
+        <div class="informacoes">
+            <p class="p-i">Nome</p>
+            <p class="p-i">@Model.Cliente.Nome</p>
+        </div>
+        <div class="informacoes">
+            <p class="p-i">Data de nascimento</p>
+            <p class="p-i">@Model.Cliente.DataNascimento.ToString("dd/MM/yyyy")</p>
+        </div>
+        <div class="informacoes">
+            <p class="p-i">E-mail</p>
+            <p class="p-i">@Model.Cliente.Email</p>
+        </div>
+        <div class="informacoes">
+            <p class="p-i">Telefone</p>
+            <p class="p-i">@Model.Cliente.Telefone</p>
+        </div>
+        <div class="informacoes">
+            <p class="p-i">CPF</p>
+            <p class="p-i">@Model.Cliente.CPF</p>
+        </div>
+
+        <div id="botao-modificar">
+            <a asp-controller="Cliente" asp-action="MudarInformacao">Modificar informações</a>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</main>

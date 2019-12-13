@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rolêtop</title>
+    <link rel="stylesheet" href="estilo-agende.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+<body>
+    <header>
+        <div id="top">
+                <div id="menu-r" class="normal"><input type="checkbox" id="bt-menu">
+                <label for="bt-menu" class="icon-m">&#9776</label></div>
+                <div id="imglogo"><img src="img/logo-1-peq.png" width="130em" id="logo"/></div>
+                <div id="login" class="normal"><a href="login-cadastro.html" class="cor-lm">Login</a></div>
+        </div>        
+        <nav id="menu">
+            <ul>
+                <li class="normal"><a href="index.html" class="cor-lm">Home</a></li>
+                <li class="normal"><a href="faq.html" class="cor-lm">FAQ</a></li>
+                <li><div class="parte"></div><div class="parte1"></div></li>
+                <li class="normal"><a href="agende.html" class="cor-lm">Agende já</a></li>
+                <li class="normal"><a href="galeria.html" class="cor-lm">Galeria</a></li>
+            </ul>
+        </nav>
+       
+        </header>
+
+        <div id="divisao"></div>
+        <div id="divisao-1"></div>
+        
+        <main>
+            <section id="meio" class="agende">
+                <h2 id="titulo"><strong> Agende-já </strong></h2>
+                <form method="GET" action="index.html">
+                    <div class="informacao">
+
+                        <label for="nome-do-usuario">Nome Completo</label>
+                        <input id="nome-do-usuario" type="text" maxlength="30" minlength="3" autofocus required>
+                    
+                    </div>
+
+                    <br>
+
+                    <div class="informacao">
+
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" type="text" maxlength="30" minlength="3" autofocus required>
+                    
+                    </div>
+
+                    <br>
+                    
+                    <div class="informacao">
+
+                            <label for="numero">Número</label>
+                            <input id="numero" type="text" maxlength="30" minlength="3" autofocus required>
+                        
+                        </div>
+
+                    <br />
+                    
+                    </div >
+
+                    <br />
+
+
+                    <div class="informacao">
+
+                        <label for="date">Anisversario</label>
+                        <input id="date" type="date" min="2019-09-10" max="2021-01-01" required>
+
+                    </div>
+
+                    <br />
+                    
+                    <div id="finalizar-agendamento">
+                        <input class="botao" type="submit" value="Agendar">
+                    </div>
+                </form>
+
+
+
+            </section>
+        </main>
+</body>
+    <footer>
+
+        <div id="icon-tel">
+            <i class="fas fa-phone-square-alt fa-3x"></i>
+            <p class="rodape-text">XX XXXX-XXXX</p>
+        </div>
+
+        <div id="icon-email">
+            <i class="far fa-envelope fa-3x"></i>
+            <p class="rodape-text">XXXXXXXXXX@hotmail.com</p>
+        </div>
+
+        <div id="icon-face">
+            <i class="fab fa-facebook-square fa-3x"></i>
+            <p class="rodape-text">Visite nossa pagina</p>
+        </div>
+
+    </footer>
+</html>

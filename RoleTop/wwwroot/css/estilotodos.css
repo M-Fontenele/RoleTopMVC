@@ -1,0 +1,12 @@
+main{
+    height: 784px;
+}
+body{
+    background-color: #7d0093;
+}
+.resposta{
+    height: 784px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

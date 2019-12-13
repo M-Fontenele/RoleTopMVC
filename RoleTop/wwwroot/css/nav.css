@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    height: 2.7em;
+    background-color: #ffc600;
+    font-size: 1.5em;
+}
+
+#bt-menu {
+    display: none;
+}
+
+#bt-mobile-menu{
+    margin-left: 180px; 
+    visibility: hidden;
+}
+
+.icon-m {
+    margin-left: 20px;
+}
+
+#botao-logoff{
+    transform: rotate(90deg);
+    font-size: 0.6em;
+}
+
+#imglogo {
+    margin-top: 7px;
+    margin-right: 20px; 
+}
+
+#logo {
+    position: relative;
+    z-index: 99999999999;
+}
+
+#usuario {
+    margin-top: 0.8em;
+    margin-right: 180px;
+}
+#login {
+    margin-right: 180px;
+}
+div > div.normal {
+    display: flex;
+    align-items: center;
+}
+/*===================================================================================================================
+                                            INICIO - NAV 
+==================================================================================================================*/
+
+.cor-lm {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    font-size: 1.5em;
+    height: 2em;
+    background-color: #470054;
+    width: 100%
+}
+
+nav ul > li.normal {
+    display: flex;
+    align-items: center;
+}
+
+li.normal a {
+    border-radius: 10px
+}
+
+li.normal a:hover {
+    background: #ffc600;
+    color: #000000;
+}
+
+.parte {
+    width: 500px;
+    position: relative;
+    border-top: 1.95em solid #ffc600;
+    border-left: 2em solid transparent;
+    border-right: 2em solid transparent;
+}
+
+.parte1 {
+    width: 407px;
+    position: relative;
+    height: 0.1em;
+    border: 0.1em solid #ffc600;
+    border-radius: 0 0 50px 50px;
+    left: 46.5px;
+    top: -3.5px;
+}
+
+header{
+    width: 100%;
+}
+
+
+
+/*===================================================================================================================
+                                                 FIM - NAV 
+==================================================================================================================*/
+#divisao {
+    height: 2px;
+    background-color: #470054;
+}
+#divisao-1 {
+    height: 2px;
+    background-color: #000000;
+}
+
+
+@media (max-width: 1250px){
+    .parte {
+        width: 300px;
+        position: relative;
+        border-top: 1.95em solid #ffc600;
+        border-left: 2em solid transparent;
+        border-right: 2em solid transparent;
+    }
+    
+    .parte1 {
+        width: 208px;
+        position: relative;
+        height: 0.1em;
+        border: 0.1em solid #ffc600;
+        border-radius: 0 0 50px 50px;
+        left: 46.5px;
+        top: -3.5px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 700px) {
+    label[for="bt-menu"]{
+        display: block;
+    }
+
+    nav ul {
+        font-size: 0.7em;
+
+    }
+
+    #top {
+        height: 1.8em;
+        font-size: 0.8em;
+    }
+
+    #logo {
+        width: 3.5em;   
+    }
+
+    #imglogo {
+        margin-top: 0;
+        margin-right: 0; 
+    }
+
+    .parte {
+        visibility: hidden;
+    }
+    
+    .parte1 {
+        visibility: hidden;
+    }
+    nav #bt-mobile-menu {
+        display: block;
+    }
+
+    nav .bt-common-menu {
+        display: none;
+    }
+
+    nav .bt-common-menu.active {
+        display: block;
+    }
+
+    nav ul.mobile-mode {
+        display: flex;
+        flex-direction: column;
+    }
+    #bt-mobile-menu{
+        margin-left: 20px; 
+        visibility: visible;
+    }
+    #usuario {
+        margin-top: 0.8em;
+        margin-right: 100px;
+    }
+    #login {
+        margin-right: 50px;
+    }
+}

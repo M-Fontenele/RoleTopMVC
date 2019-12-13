@@ -1,0 +1,150 @@
+﻿@model RoleTop.ViewModels.BaseViewModel;
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rolêtop</title>
+
+    @if("Admin".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/meus-eventos.css" >
+    }
+    @if("InfoUsuario".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/info-usuario.css" >
+    }
+    @if("MeusEventos".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/meus-eventos.css" >
+    }
+    @if("Cadastro".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/login.css">
+    }
+    @if("Login".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/login.css">
+    }
+    @if("OutrosEventos".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/estilo-galeria.css">
+    }
+    @if("Formatura".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/estilo-galeria.css">
+    }
+    @if("Salao".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/estilo-galeria.css">
+    }
+    @if("Balada".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/estilo-galeria.css">
+    }
+    @if("Casamento".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/estilo-galeria.css">
+    }
+    @if("Plantas".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/estilo-galeria.css">
+    }
+    @if("Agenda".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/estilo-agende.css">
+    }
+    @if("AFaq".Equals(@Model.NomeView)){
+        <link rel="stylesheet" href="~/css/estilo-faq.css" >
+    }
+    @if("Home".Equals(@Model.NomeView))
+    {
+        <link rel="stylesheet" href="~/css/estilo.css" >
+    }
+    <link rel="stylesheet" href="~/css/nav.css">
+    <link rel="stylesheet" href="~/css/footer.css">
+    
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    
+</head>
+<body>
+    <header>
+    <div id="top">
+            <div id="bt-mobile-menu" class="normal"><a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                    <i class="fa fa-bars"></i>
+                </a></div>
+            <div id="imglogo"><img src="~/img/logo-1-peq.png" width="130em" id="logo"/></div>
+            @if(string.IsNullOrEmpty(@Model.UsuarioEmail)){
+            <div id="login" class="normal"><a asp-controller="Cliente" asp-action="Login" class="cor-lm">Login</a></div>
+            }
+            else{
+                <div class="dropdown" id="usuario" class="normal"><a asp-controller="Cliente" asp-action="MeusEventos" class="cor-lm">@Model.UsuarioNome <i id="botao-logoff" class="fas fa-play"></i></a>
+                    <div class="dropdown-content">
+                        <a asp-controller="Cliente" asp-action="InfoUsuario" >Minhas Informações</a>
+                        <a asp-controller="Cliente" asp-action="MeusEventos" >Meus Eventos</a>
+                        @if(@Model.Cliente.TipoUsuario == 0){
+                            <a asp-controller="Administrador" asp-action="Pendentes" >Dashboard</a>
+                        }
+                        <a asp-controller="Cliente" asp-action="Logoff" >Logout</a>
+                    </div>
+                </div>
+            }
+        </div>    
+    <nav id="menu">
+        <ul>
+            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="cor-lm">Home</a></li>
+            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="AFaq" asp-action="Faq" class="cor-lm">FAQ</a></li>
+            <li><div class="parte"></div><div class="parte1"></div></li>
+            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Agenda" asp-action="Agendar" class="cor-lm">Agende já</a></li>
+            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Galeria" asp-action="Plantas" class="cor-lm">Galeria</a></li>
+        </ul>
+    </nav>
+    
+    </header>
+
+    <div id="divisao"></div>
+    <div id="divisao-1"></div>
+
+            @RenderBody()
+
+<footer>
+
+        <div id="icon-tel">
+            <i class="fas fa-phone-square-alt fa-3x"></i>
+            <p class="rodape-text">XX XXXX-XXXX</p>
+        </div>
+
+        <div id="icon-email">
+            <i class="far fa-envelope fa-3x"></i>
+            <p class="rodape-text">XXXXXXXXXX@hotmail.com</p>
+        </div>
+
+        <div id="icon-face">
+            <i class="fab fa-facebook-square fa-3x"></i>
+            <p class="rodape-text">Visite nossa pagina</p>
+        </div>
+
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-skull");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-skull");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+        
+    </script>
+
+</body>
+</html>
